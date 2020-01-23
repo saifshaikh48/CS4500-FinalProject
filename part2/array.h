@@ -1,0 +1,9 @@
+class Array {
+    public: 
+
+    Array(){
+
+    }
+
+    
+};
