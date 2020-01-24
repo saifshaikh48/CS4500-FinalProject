@@ -33,9 +33,9 @@ public:
     }
 
     /**
-     * Sets the hash value for this Object. 
+     * Returns the hash value for this Object.
      */
-    virtual void hashme()
+    virtual int hash()
     {
     }
 };

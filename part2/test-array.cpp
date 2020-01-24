@@ -218,6 +218,30 @@ public:
 
         OK("Already Sorted Array Test Passed");
     }
+
+    /**
+     * Test to verify that the equals function can tell when two arrays are equal and when they are not. 
+     * 
+     * Prints "Equals Test Passed" if the test is passed, exits otherwise.
+     */
+    void testEquals() {
+        setup();
+        t_true(threeunsorted->equals(threeunsorted));
+        t_false(threeunsorted->equals(threesorted));
+        OK("Equals Test Passed");
+    }
+
+    /**
+     * Test to verify that the hash function returns the correct hash value when called.
+     * 
+     * Prints "Hash Test Passed" if the test is passed, exits otherwise.
+     */
+    void testHash() {
+        setup();
+        t_true(threesorted->hash() == threesorted->hash());
+        t_false(threesorted->hash() == threeunsorted->hash());
+        OK("Hash Test Passed");
+    }
 };
 
 /**
@@ -232,6 +256,8 @@ int main(){
     test->testSize();
     test->testSort();
     test->testAlreadySorted();
+    test->testEquals();
+    test->testHash();
     delete test;
     return 0;
 };

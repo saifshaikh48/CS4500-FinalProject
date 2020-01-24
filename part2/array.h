@@ -7,7 +7,7 @@
  * 
  * authors: singh.kar@husky.neu.edu and haiber.ow@husky.neu.edu
  */
-class Array: public Object
+class Array : public Object
 {
 public:
     /**
@@ -72,6 +72,22 @@ public:
      * Sorts the array in alphanumeric ascending order. 
      */
     void sort()
+    {
+    }
+
+    /**
+     * Checks to see if this array is equal to that one.
+     * 
+     * @arg other  the second array being compared to this one
+     */
+    bool equals(Array *other)
+    {
+    }
+
+    /**
+     * Returns the hash value for this Array.
+     */
+    int hash()
     {
     }
 };
