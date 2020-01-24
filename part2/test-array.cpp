@@ -114,7 +114,7 @@ public:
     /**
      * Series of tests to verify that the size method of the Array class works correctly. 
      * 
-     * Prints "Size Test Passed" if all tests were passed, exits otherwise. 
+     * Prints "Size Test Passed" if all tests passed, exits otherwise. 
      */
     void testSize(){
         setup();
@@ -126,7 +126,7 @@ public:
     /**
      * Series of tests to verify that the length method of the Array class works correctly.
      * 
-     * Prints "Length Test Passed" if all tests were passed, exits otherwise. 
+     * Prints "Length Test Passed" if all tests passed, exits otherwise. 
      */
     void testLength(){
         setup();
@@ -138,7 +138,7 @@ public:
     /**
      * Series of tests to verify that the add method of the Array class works correctly.
      * 
-     * Prints "Add Test Passed" if all tests were passed, exits otherwise.
+     * Prints "Add Test Passed" if all tests passed, exits otherwise.
      */
     void testAdd(){
         setup();
@@ -148,6 +148,11 @@ public:
         OK("Add Test Passed");
     }
 
+    /**
+     * Series of tests to verify that the remove method of the Array class works correctly.
+     * 
+     * Prints "Remove Tests Passed" if all tests passed, exits otherwise.
+     */
     void testRemove(){
         setup();
         tensize->add(4,hello);
@@ -159,6 +164,11 @@ public:
         OK("Remove Tests Passed");
     }
 
+    /**
+     * Series of tests to verify that the get method of the Array class works crrectly.
+     * 
+     * Prints "Get Tests Passed" if all tests passed, exits otherwise. 
+     */
     void testGet(){
         setup();
         t_true(threesorted->get(1)->equals(hello));
