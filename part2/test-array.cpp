@@ -222,5 +222,5 @@ int main(){
     test->testSort();
     test->testAlreadySorted();
     delete test;
-    return 1;
+    return 0;
 };
