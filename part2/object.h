@@ -2,7 +2,7 @@
 
 /**
  * Object: this class represents the most basic methods of an object and is intended to be
- *         extended by other classes.
+ *         extended by other classes
  * 
  * authors: singh.kar@husky.neu.edu and haiber.ow@husky.neu.edu
  */
@@ -16,6 +16,9 @@ public:
     {
     }
 
+    /**
+     * Destructor for an Object.
+     */
     ~Object()
     {
     }
