@@ -7,7 +7,7 @@
  * 
  * authors: singh.kar@husky.neu.edu and haiber.ow@husky.neu.edu
  */
-class Array
+class Array: public Object
 {
 public:
     /**
