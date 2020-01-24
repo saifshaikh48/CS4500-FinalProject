@@ -7,7 +7,7 @@
  * 
  * authors: singh.kar@husky.neu.edu and haiber.ow@husky.neu.edu
  */
-class Array : public Object
+class Array: public Object
 {
 public:
     /**
@@ -80,14 +80,14 @@ public:
      * 
      * @arg other  the second array being compared to this one
      */
-    bool equals(Array *other)
-    {
+    bool equals(Array* other) {
+
     }
 
     /**
      * Returns the hash value for this Array.
      */
-    int hash()
-    {
+    int hash() {
+
     }
 };

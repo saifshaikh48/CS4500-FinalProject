@@ -2,7 +2,6 @@
 #include "object.h"
 #include <stdio.h>
 #include <string.h>
-#include <cassert>
 
 /**
  * Object: this class represents a string of characters
