@@ -1,44 +1,77 @@
+#pragma once
 #include "object.h"
 #include <stdlib.h>
 
 /**
- * Object: this class represents the most basic methods of an object and is intended to be
- *         extended by other classes.
+ * Array: this class represents an array of Objects or Strings
  * 
  * authors: singh.kar@husky.neu.edu and haiber.ow@husky.neu.edu
  */
-class Array {
-    public: 
-
-    Array(size_t size){
-
+class Array
+{
+public:
+    /**
+     * Builds an array of the given size.
+     * 
+     * @arg size  the size of the array
+     */
+    Array(size_t size)
+    {
     }
 
-    ~Array(){
-
+    /**
+     * Destructor for the array.
+     */
+    ~Array()
+    {
     }
 
-    size_t size(){
-
+    /**
+     * Returns the total size of the array. 
+     */
+    size_t size()
+    {
     }
 
-    size_t length(){
-
+    /**
+     * Returns the number of Objects in the array.
+     */
+    size_t length()
+    {
     }
 
-    void add(size_t index, Object * obj){
-
+    /**
+     * Adds the given Object to the array at the given index.
+     * 
+     * @arg index  the index where the object will be added
+     * @arg obj  the Object being added to the array
+     */
+    void add(size_t index, Object *obj)
+    {
     }
 
-    void remove(size_t i) {
-
+    /**
+     * Removes the Object at the given index.
+     * 
+     * @arg index  the index of the Object being removed
+     */
+    void remove(size_t index)
+    {
     }
 
-    Object* get(size_t i) {
-
+    /**
+     * Returns the Object at the given index.
+     * 
+     * @arg index  the index of the Object being returned
+     */
+    Object *get(size_t index)
+    {
     }
 
-    void sort(){
-
+    /**
+     * Sorts the array in alphanumeric ascending order. 
+     */
+    void sort()
+    {
     }
 };

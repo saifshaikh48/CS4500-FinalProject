@@ -52,13 +52,6 @@ public:
         return new String(buffer);
     }
 
-    // Checks to see if this String is equal to that object
-    // bool equals(Object* other) {
-    //     String* temp = dynamic_cast<String*>(other);
-
-    //     return this->equals(temp);
-    // }
-
     // Checks to see if this String is equal to the other one.
     bool equals(String *other)
     {

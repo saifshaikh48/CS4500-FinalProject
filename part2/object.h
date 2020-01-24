@@ -1,3 +1,5 @@
+#pragma once
+
 /**
  * Object: this class represents the most basic methods of an object and is intended to be
  *         extended by other classes.
@@ -14,8 +16,8 @@ public:
     {
     }
 
-    ~Object(){
-
+    ~Object()
+    {
     }
 
     /**

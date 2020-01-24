@@ -22,6 +22,7 @@ public:
     Array* tensize;
     Array* threeunsorted;
     Array* threesorted;
+    Array* halfempty;
 
     ArrayTestFrame()
     {
@@ -49,6 +50,7 @@ public:
         threeunsorted = new Array(3);
         threesorted = new Array(3);
         threeunsorted = new Array(3);
+        halfempty = new Array(2);
 
         threesorted->add(0, goodbye);
         threesorted->add(1, hello);
@@ -57,6 +59,9 @@ public:
         threeunsorted->add(0, zebra);
         threeunsorted->add(1, hello);
         threeunsorted->add(2, goodbye);
+
+        halfempty->add(0, hello);
+        halfempty->add(1, goodbye);
     }
 
     void FAIL()
@@ -86,17 +91,18 @@ public:
         t_true(empty->size() == 0);
         t_true(tensize->size() == 10);
         OK("Size Test Passed");
-        this->~ArrayTestFrame;
     }
 
     void testLength(){
         setup();
-
+        t_true(threeunsorted->length() == 3);
+        t_true(halfempty->length() == 2);
+        OK("Length Test Passed");
     }
 
     void testAdd(){
         setup();
-
+        
     }
 
     void testRemove(){
