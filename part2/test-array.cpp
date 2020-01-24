@@ -15,15 +15,15 @@ class ArrayTestFrame
 public:
     Object *nothing; // blank object
 
-    String *hello; // String containing "hello"
+    String *hello;   // String containing "hello"
     String *goodbye; // String containing "goodbye"
-    String* zebra; // String containing "zebra"
+    String *zebra;   // String containing "zebra"
 
-    Array* empty; // Blank Array of size 0
-    Array* tensize; // Blank Array of size 10
-    Array* threeunsorted; // Unsorted Array of size 3 with 3 Strings in it
-    Array* threesorted; // Sorted Array of size 3 with 3 String in it 
-    Array* halfempty; // Array of size 4 with 2 Strings in it
+    Array *empty;         // Blank Array of size 0
+    Array *tensize;       // Blank Array of size 10
+    Array *threeunsorted; // Unsorted Array of size 3 with 3 Strings in it
+    Array *threesorted;   // Sorted Array of size 3 with 3 String in it
+    Array *halfempty;     // Array of size 4 with 2 Strings in it
 
     /**
      * Constructor for the test class which sets the base values for the tests
@@ -32,11 +32,12 @@ public:
     {
         setup();
     }
-     
+
     /**
      * Destructor for the ArrayTestFrame. 
      */
-    ~ArrayTestFrame(){
+    ~ArrayTestFrame()
+    {
         delete nothing;
         delete hello;
         delete goodbye;
@@ -47,7 +48,7 @@ public:
         delete threesorted;
         delete halfempty;
     }
-    
+
     /**
      * Sets the initial values for the fields in the class. 
      */
@@ -117,7 +118,8 @@ public:
      * 
      * Prints "Size Test Passed" if all tests passed, exits otherwise. 
      */
-    void testSize(){
+    void testSize()
+    {
         setup();
         t_true(empty->size() == 0);
         t_true(tensize->size() == 10);
@@ -129,7 +131,8 @@ public:
      * 
      * Prints "Length Test Passed" if all tests passed, exits otherwise. 
      */
-    void testLength(){
+    void testLength()
+    {
         setup();
         t_true(threeunsorted->length() == 3);
         t_true(halfempty->length() == 2);
@@ -141,11 +144,12 @@ public:
      * 
      * Prints "Add Test Passed" if all tests passed, exits otherwise.
      */
-    void testAdd(){
+    void testAdd()
+    {
         setup();
         tensize->add(4, hello);
         t_true(tensize->get(4)->equals(hello));
-        
+
         OK("Add Test Passed");
     }
 
@@ -154,9 +158,10 @@ public:
      * 
      * Prints "Remove Tests Passed" if all tests passed, exits otherwise.
      */
-    void testRemove(){
+    void testRemove()
+    {
         setup();
-        tensize->add(4,hello);
+        tensize->add(4, hello);
         t_true(tensize->get(4)->equals(hello));
 
         tensize->remove(4);
@@ -170,7 +175,8 @@ public:
      * 
      * Prints "Get Tests Passed" if all tests passed, exits otherwise. 
      */
-    void testGet(){
+    void testGet()
+    {
         setup();
         t_true(threesorted->get(1)->equals(hello));
 
@@ -182,18 +188,19 @@ public:
      * 
      * Prints "Sort Test Passed" if the test is passed, exits otherwise.
      */
-    void testSort(){
+    void testSort()
+    {
         setup();
 
-        t_true(threeunsorted->get(0)->equals(zebra));   
-        t_true(threeunsorted->get(1)->equals(hello));   
-        t_true(threeunsorted->get(2)->equals(goodbye));   
+        t_true(threeunsorted->get(0)->equals(zebra));
+        t_true(threeunsorted->get(1)->equals(hello));
+        t_true(threeunsorted->get(2)->equals(goodbye));
 
         threeunsorted->sort();
 
-        t_true(threeunsorted->get(0)->equals(goodbye));   
-        t_true(threeunsorted->get(1)->equals(hello));   
-        t_true(threeunsorted->get(2)->equals(zebra));          
+        t_true(threeunsorted->get(0)->equals(goodbye));
+        t_true(threeunsorted->get(1)->equals(hello));
+        t_true(threeunsorted->get(2)->equals(zebra));
 
         OK("Sort Test Passed");
     }
@@ -203,18 +210,19 @@ public:
      * 
      * Prints "Already Sorted Array Test Passed" if the test is passed, exits otherwise. 
      */
-    void testAlreadySorted(){
+    void testAlreadySorted()
+    {
         setup();
 
-        t_true(threesorted->get(0)->equals(goodbye));   
-        t_true(threesorted->get(1)->equals(hello));   
-        t_true(threesorted->get(2)->equals(zebra));   
+        t_true(threesorted->get(0)->equals(goodbye));
+        t_true(threesorted->get(1)->equals(hello));
+        t_true(threesorted->get(2)->equals(zebra));
 
         threesorted->sort();
 
-        t_true(threesorted->get(0)->equals(goodbye));   
-        t_true(threesorted->get(1)->equals(hello));   
-        t_true(threesorted->get(2)->equals(zebra));          
+        t_true(threesorted->get(0)->equals(goodbye));
+        t_true(threesorted->get(1)->equals(hello));
+        t_true(threesorted->get(2)->equals(zebra));
 
         OK("Already Sorted Array Test Passed");
     }
@@ -224,7 +232,8 @@ public:
      * 
      * Prints "Equals Test Passed" if the test is passed, exits otherwise.
      */
-    void testEquals() {
+    void testEquals()
+    {
         setup();
         t_true(threeunsorted->equals(threeunsorted));
         t_false(threeunsorted->equals(threesorted));
@@ -236,7 +245,8 @@ public:
      * 
      * Prints "Hash Test Passed" if the test is passed, exits otherwise.
      */
-    void testHash() {
+    void testHash()
+    {
         setup();
         t_true(threesorted->hash() == threesorted->hash());
         t_false(threesorted->hash() == threeunsorted->hash());
@@ -247,8 +257,9 @@ public:
 /**
  * Runs the tests in the ArrayTestFrame class. 
  */
-int main(){
-    ArrayTestFrame* test = new ArrayTestFrame();
+int main()
+{
+    ArrayTestFrame *test = new ArrayTestFrame();
     test->testAdd();
     test->testGet();
     test->testLength();

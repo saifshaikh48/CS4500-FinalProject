@@ -11,7 +11,7 @@
 class String : public Object
 {
 public:
-    char *val; // value of the String 
+    char *val; // value of the String
     int size_; // length of the String
 
     /**
