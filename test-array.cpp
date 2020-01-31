@@ -283,7 +283,7 @@ void test6() {
  delete tsetett;
  delete s;
  delete t;
- delete u;/*
+ delete u;*/
 
  OK("6");
 }
