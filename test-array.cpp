@@ -250,6 +250,7 @@ void test6() {
  t_false(s->equals(t));
  t_false(s->equals(u));
 
+ printf("%d\n\n", u->size()); 
  /*t_true(u->size() == 10); 
  t_true(s->charAt(2) == s->charAt(3));
  t_true(s->charAt(0) == 'H'); 
