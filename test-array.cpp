@@ -243,13 +243,13 @@ void test5() {
 }
 
 void test6() {
- /*String * s = new String("Hello");
+ String * s = new String("Hello");
  String * t = new String("World");
  String * u = s->concat(t);
  t_true(s->equals(s));
  t_false(s->equals(t));
  t_false(s->equals(u));
-
+/*
  t_true(u->size() == 10); 
  t_true(s->charAt(2) == s->charAt(3));
  t_true(s->charAt(0) == 'H'); 
