@@ -2,6 +2,8 @@
 
 #include "object.h"
 #include <iostream> //only for print() function as specified by a spec team
+#include <assert.h>
+
 /**
 * Represents a string class, or a character 'list'
 */
