@@ -256,7 +256,7 @@ void test6() {
  printf("s: %zu\n\n", s->size()); 
  printf("t: %zu\n\n", t->size()); 
  printf("u: %zu\n\n", u->size()); 
- /*t_true(u->size() == 10); 
+ t_true(u->size() == 10); 
  t_true(s->charAt(2) == s->charAt(3));
  t_true(s->charAt(0) == 'H'); 
  t_true(s->charAt(3) == t->charAt(3));
@@ -284,7 +284,7 @@ void test6() {
  delete s;
  delete t;
  delete u;
-*/
+
  OK("6");
 }
  
