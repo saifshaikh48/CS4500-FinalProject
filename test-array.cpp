@@ -251,11 +251,11 @@ void test6() {
  t_false(s->equals(u));
 
  t_true(u->size() == 10); 
- t_true(s->charAt(2) == s->charAt(3));
+/*  t_true(s->charAt(2) == s->charAt(3));
  t_true(s->charAt(0) == 'H'); 
  t_true(s->charAt(3) == t->charAt(3));
 
-/* 
+
  String * tsetett = new String();
  t_true(tsetett->isEmpty()); 
  t_true(tsetett->size() == 0); 
