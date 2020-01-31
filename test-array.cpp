@@ -260,7 +260,7 @@ void test6() {
  t_true(s->charAt(2) == s->charAt(3));
  t_true(s->charAt(0) == 'H'); 
  t_true(s->charAt(3) == t->charAt(3));
-/*
+
 
  String * tsetett = new String();
  t_true(tsetett->isEmpty()); 
@@ -269,7 +269,7 @@ void test6() {
  t_true(tsetett->size() == 10); 
  t_true(tsetett->equals(u)); 
  t_false(tsetett->isEmpty()); 
-
+/*
  String * test = s->clone();
  t_true(test->equals(s)); 
  t_true(test->hash() == s->hash()); 
