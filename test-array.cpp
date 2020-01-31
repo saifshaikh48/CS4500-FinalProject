@@ -274,8 +274,8 @@ void test6() {
  printf("tsetett: %zu\n\n", tsetett->size()); 
  
  t_true(tsetett->size() == 10); 
- /*t_true(tsetett->equals(u)); 
- t_false(tsetett->isEmpty()); 
+ t_true(tsetett->equals(u)); 
+ /*t_false(tsetett->isEmpty()); 
  
 
  String * test = s->clone();
