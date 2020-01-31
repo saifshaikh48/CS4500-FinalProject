@@ -274,7 +274,7 @@ void test6() {
  t_false(u->compare(test) == 0);
  
  //delete test;
- delete tsetett;
+ //delete tsetett;
  delete s;
  delete t;
  delete u;
