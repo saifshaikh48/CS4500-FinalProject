@@ -31,6 +31,8 @@ class String : public Object {
         for (int i = 0; i < len; i ++) {
             str[i] = input[i];
         }
+      
+        str[len] = '\0';
     }
 
   /**
@@ -49,6 +51,8 @@ class String : public Object {
     for (int i = 0; i < len; i ++) {
       str[i] = c[i];
     }
+    
+    str[len] = '\0';
   }
 
 
@@ -61,6 +65,7 @@ class String : public Object {
       str[i] = s->str[i];
     }
 
+    str[len] = '\0';
   }
 
   //default
@@ -160,8 +165,6 @@ class String : public Object {
     for(size_t j = len; j < len + s->len; j++) {
       newCharArray[j] = s->str[j - len];
     }
-
-    newCharArray[len + s->len] = '\0';
     
     String* newStr = new String(newCharArray);
 
