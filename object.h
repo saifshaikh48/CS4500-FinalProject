@@ -1,41 +1,54 @@
+#include <stddef.h>
 #pragma once
 
-/**
- * Object: this class represents the most basic methods of an object and is intended to be
- *         extended by other classes
- * 
- * authors: singh.kar@husky.neu.edu and haiber.ow@husky.neu.edu
- */
-class Object
-{
-public:
-    /**
-     * Simple constructor for an Object. 
-     */
-    Object()
-    {
-    }
+// Generic object.
+class Object {
 
-    /**
-     * Destructor for an Object.
-     */
-    ~Object()
-    {
-    }
+    public:
 
-    /**
-     * Checks to see if this Object is equal to the given one.
-     * 
-     * @arg other  another object
-     */
-    virtual bool equals(Object *other)
-    {
-    }
+        /**
+        * The constructor for this object.
+        */
+        Object() {
+        }
 
-    /**
-     * Returns the hash value for this Object.
-     */
-    virtual size_t hash()
-    {
-    }
+        ~Object() {
+            
+        }
+
+        /**
+        * Is this object equal to that object?
+        * @param o is the object to compare equality to.
+        * @return   whether this object is equal to that object.
+        */
+        virtual bool equals(Object* o) {
+            return this == o;
+        }
+
+        /**
+        * Determines whether this object is equal to another object
+        *
+        * Args:
+        * - other: the object to compare this object to
+        */
+        virtual bool equals(Object const *other) {
+            return this == other;
+        }
+
+        /**
+        * Calculate this object's hash.
+        * @return a natural number of a hash for this object.
+        */
+        virtual size_t hash() {
+            return 0;
+        }
+
+        /**
+        * Calculate this object's hash (helper method).
+        * @return a natural number of a hash for this object.
+        */
+        virtual size_t hash_me_() {
+            return reinterpret_cast<size_t>(this);
+        }
+
 };
