@@ -263,7 +263,7 @@ void test6() {
  t_true(tsetett->size() == 10); 
  t_true(tsetett->equals(u)); 
  t_false(tsetett->isEmpty()); 
-
+/*
  String * test = s->clone();
  t_true(test->equals(s)); 
  t_true(test->hash() == s->hash()); 
@@ -273,12 +273,12 @@ void test6() {
  t_true(u->compare(s) > 0);
  t_false(u->compare(test) == 0);
  
- //delete test;
- //delete tsetett;
- //delete s;
- //delete t;
- //delete u;
-
+ delete test;
+ delete tsetett;
+ delete s;
+ delete t;
+ delete u;
+*/
  OK("6");
 }
  
