@@ -279,7 +279,7 @@ void test6() {
  
 
  String * test = s->clone();
- //t_true(test->equals(s)); 
+ t_true(test->equals(s)); 
  t_true(test->hash() == s->hash()); 
 
  t_true(test->compare(s) == 0);
