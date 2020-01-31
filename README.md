@@ -1,4 +1,2 @@
-# CS4500-Assignment 1 Part 2
-Authors: Owen Haiber and Karman Singh
-
-
+Part 2 Description:
+For our API, we decided to design an Array API (along with the required Object API). For the Object API, we decided that there were only 2 core methods for every Object and those are hash and equals. Therefore, our Object API only contains a hashme method and an equals method. Our Array API was a bit more complicated as there are methods that are useful in the context of an Array. Starting with the constructor, it takes in a size_t and creates an array of that specified size. Next, the size method and the length method return the size of the whole array and the number of elements in the array respectiviely. We also have add and remove methods which both mutate the array and add/remove Objects given an index. Finally, the get method returns the Object at the given index and the sort method sorts the array alphanumerically in ascending order. 
