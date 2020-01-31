@@ -161,6 +161,8 @@ class String : public Object {
       newCharArray[j] = s->str[j - len];
     }
 
+    newCharArray[len + s->len] = '\0';
+    
     String* newStr = new String(newCharArray);
 
     return newStr;
