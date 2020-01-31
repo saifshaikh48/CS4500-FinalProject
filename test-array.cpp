@@ -246,16 +246,11 @@ void test6() {
  String * s = new String("Hello");
  String * t = new String("World");
  String * u = s->concat(t);
- printf("s: %zu\n\n", s->size()); 
- printf("t: %zu\n\n", t->size()); 
- printf("u: %zu\n\n", u->size()); 
+ 
  t_true(s->equals(s));
  t_false(s->equals(t));
  t_false(s->equals(u));
 
- printf("s: %zu\n\n", s->size()); 
- printf("t: %zu\n\n", t->size()); 
- printf("u: %zu\n\n", u->size()); 
  t_true(u->size() == 10); 
  t_true(s->charAt(2) == s->charAt(3));
  t_true(s->charAt(0) == 'H'); 
@@ -263,12 +258,25 @@ void test6() {
 
 
  String * tsetett = new String();
+ 
+ printf("s: %zu\n\n", s->size()); 
+ printf("t: %zu\n\n", t->size()); 
+ printf("u: %zu\n\n", u->size()); 
+ printf("tsetett: %zu\n\n", tsetett->size()); 
+ 
  t_true(tsetett->isEmpty()); 
  t_true(tsetett->size() == 0); 
  tsetett = tsetett->concat(u);
+ 
+ printf("s: %zu\n\n", s->size()); 
+ printf("t: %zu\n\n", t->size()); 
+ printf("u: %zu\n\n", u->size()); 
+ printf("tsetett: %zu\n\n", tsetett->size()); 
+ 
  t_true(tsetett->size() == 10); 
  t_true(tsetett->equals(u)); 
  t_false(tsetett->isEmpty()); 
+ 
 /*
  String * test = s->clone();
  t_true(test->equals(s)); 
