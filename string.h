@@ -205,6 +205,7 @@ class String : public Object {
     }
 
     String* clone() {
+      str[len] = '\0';
         String* s = new String(str);
         return s;
     }
