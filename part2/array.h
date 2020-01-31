@@ -55,7 +55,7 @@ public:
      * 
      * @arg index  the index of the Object being removed
      */
-    void remove(size_t index)
+    Object *remove(size_t index)
     {
     }
 
