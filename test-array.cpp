@@ -284,7 +284,7 @@ void test6() {
  printf("u: %s\n\n", u->str); 
  printf("tsetett: %s\n\n", tsetett->str); 
  
- //t_true(tsetett->equals(u)); 
+ t_true(tsetett->equals(u)); 
  t_false(tsetett->isEmpty()); 
  
 
