@@ -246,6 +246,9 @@ void test6() {
  String * s = new String("Hello");
  String * t = new String("World");
  String * u = s->concat(t);
+ printf("s: %s\n\n", s->str); 
+ printf("t: %s\n\n", t->str); 
+ printf("u: %s\n\n", u->str); 
  
  t_true(s->equals(s));
  t_false(s->equals(t));
