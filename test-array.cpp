@@ -274,6 +274,13 @@ void test6() {
  printf("tsetett: %zu\n\n", tsetett->size()); 
  
  t_true(tsetett->size() == 10); 
+ printf("s: %zu\n\n", s->size()); 
+ printf("t: %zu\n\n", t->size()); 
+ printf("u: %zu\n\n", u->size()); 
+ printf("tsetett: %zu\n\n", tsetett->size()); 
+ printf("u: %s\n\n", u->str); 
+ printf("tsetett: %s\n\n", tsetett->str); 
+ 
  //t_true(tsetett->equals(u)); 
  t_false(tsetett->isEmpty()); 
  
