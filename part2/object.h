@@ -35,7 +35,7 @@ public:
     /**
      * Returns the hash value for this Object.
      */
-    virtual int hash()
+    virtual size_t hash()
     {
     }
 };

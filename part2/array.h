@@ -87,7 +87,7 @@ public:
     /**
      * Returns the hash value for this Array.
      */
-    int hash()
+    size_t hash()
     {
     }
 };
