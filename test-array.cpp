@@ -275,9 +275,9 @@ void test6() {
  
  //delete test;
  //delete tsetett;
- delete s;
- delete t;
- delete u;
+ //delete s;
+ //delete t;
+ //delete u;
 
  OK("6");
 }
