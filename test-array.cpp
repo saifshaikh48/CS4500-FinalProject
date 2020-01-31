@@ -243,7 +243,7 @@ void test5() {
 }
 
 void test6() {
- String * s = new String("Hello");
+ /*String * s = new String("Hello");
  String * t = new String("World");
  String * u = s->concat(t);
  t_true(s->equals(s));
@@ -263,7 +263,7 @@ void test6() {
  t_true(tsetett->size() == 10); 
  t_true(tsetett->equals(u)); 
  t_false(tsetett->isEmpty()); 
-/*
+
  String * test = s->clone();
  t_true(test->equals(s)); 
  t_true(test->hash() == s->hash()); 
