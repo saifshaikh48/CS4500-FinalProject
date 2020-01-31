@@ -246,11 +246,16 @@ void test6() {
  String * s = new String("Hello");
  String * t = new String("World");
  String * u = s->concat(t);
+ printf("s: %zu\n\n", s->size()); 
+ printf("t: %zu\n\n", t->size()); 
+ printf("u: %zu\n\n", u->size()); 
  t_true(s->equals(s));
  t_false(s->equals(t));
  t_false(s->equals(u));
 
- printf("%d\n\n", u->size()); 
+ printf("s: %zu\n\n", s->size()); 
+ printf("t: %zu\n\n", t->size()); 
+ printf("u: %zu\n\n", u->size()); 
  /*t_true(u->size() == 10); 
  t_true(s->charAt(2) == s->charAt(3));
  t_true(s->charAt(0) == 'H'); 
